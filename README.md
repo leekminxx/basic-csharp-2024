@@ -171,7 +171,7 @@
     - 클래스는 상속 시 별다른 문제없음 vs 인터페이스는 구현을 하면 약속을 지키지 않으면 오류표시
     - 인터페이스에서 약속한 메서드를 구현안하면 안됨!   
 
-    ![인터페이스설명](https://raw.githubusercontent.com/leekminxx/basic-csharp-2024/main/image/KakaoTalk_20240411_172214221.png)
+    ![인터페이스설명](https://raw.githubusercontent.com/leekminxx/basic-csharp-2024/main/image/cs001.png)
 - 추상클래스(abstract)
     - virutal 메서드하고도 유사 
     - 추상클래스 단순화 시키면 인터페이스 
@@ -230,11 +230,15 @@
     - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
 
 - TIP , C# 주식 중 영역을 저장할 수 있는 주석
-    - #region ~ #endregion 영역을 Expeend 또는 Collapse 가능 
+    - #region ~ #endregion 영역을 Expeend 또는 Collapse 가능  (확장 및 축소 가능 )
+     ![region주석](https://raw.githubusercontent.com/leekminxx/basic-csharp-2024/main/image/cs002.png)
 
 ## 3일차
 - 람다식
 - LINQ
 - 애트리뷰트
 - 파이썬 실행
-- Winform UI 개발 + 파일 ,  
+- Winform UI 개발 + 파일 ,  스레드 
+- 가비지 컬렉션
+
+
