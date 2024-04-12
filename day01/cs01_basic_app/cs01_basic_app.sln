@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex03_loops", "ex03_loops\ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex04_methods", "ex04_methods\ex04_methods.csproj", "{C286FB5F-FC3F-40BE-A1DE-FAA7E4A2144F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex05_classes", "ex05_classes\ex05_classes.csproj", "{C2260502-7091-4BD6-AB52-AD42B330E773}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex06_properties", "ex06_properties\ex06_properties.csproj", "{D1343EA7-BB1A-44CF-B0FD-7B8B5058BB02}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{C286FB5F-FC3F-40BE-A1DE-FAA7E4A2144F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C286FB5F-FC3F-40BE-A1DE-FAA7E4A2144F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C286FB5F-FC3F-40BE-A1DE-FAA7E4A2144F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2260502-7091-4BD6-AB52-AD42B330E773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2260502-7091-4BD6-AB52-AD42B330E773}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2260502-7091-4BD6-AB52-AD42B330E773}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2260502-7091-4BD6-AB52-AD42B330E773}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D1343EA7-BB1A-44CF-B0FD-7B8B5058BB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1343EA7-BB1A-44CF-B0FD-7B8B5058BB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1343EA7-BB1A-44CF-B0FD-7B8B5058BB02}.Release|Any CPU.ActiveCfg = Release|Any CPU

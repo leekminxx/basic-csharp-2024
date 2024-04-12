@@ -60,7 +60,7 @@
 - 흐름제어
     - C++과 동일!
     - if, switch, while, do~while, for, break , continue, goto 모두 동일!! 
-    - C#에는 foreach가 존재 -python의 for item in [] 과 동일 
+    - **C#에는 foreach가 존재** -python의 for item in [] 과 동일 
 
     ```cs
         int[] arr = { 1, 2, 3 , 4 , 5};
@@ -72,7 +72,7 @@
         ```
 - 매서드(Method)
     - 함수와 동일. 구조적 프로그래밍 -> 함수 , 객체지향 -> 매서드로 부른다(파이썬만 예외)
-    - 매개변수 참조형식 -> C++ 에서 Pointer로 값을 사용할 때와 동일한 기능 
+    - **매개변수 참조형식** -> C++ 에서 Pointer로 값을 사용할 때와 동일한 기능 , 키워드 REF
     ```cs
      public static void RefSwap(ref int a, ref int b)
     {
@@ -95,7 +95,7 @@
     RefSwap(ref x, ref y);
     ```
 
-    - 매개변수 출력방식 -> 매개변수를 리턴값으로 사용하도록 대체해주는 방법(과도기적인 방법)
+    - 매개변수 출력방식 -> 매개변수를 리턴값으로 사용하도록 대체해주는 방법(과도기적인 방법) , 키워드 out
     ```cs
     public static void Divide(int a , int b , out int quotient, out int remainder)
     {
@@ -160,7 +160,7 @@
     - 한꺼번에 여러개의 데이터를 리턴하거나 / 전달할때 유용
     - 값 할당 후 변경불가
 
-- 인터페이스 
+- **인터페이스**
     - 클래스 - 객체의 청사진 / 인터페이스 - 클래스의 청사진(?)
     - 인터페이스는 클래스가 어떠한 메서드를 가져야 하는지를 약속하는 것 
     - 다중상속의 문제를 단일상속으로도 해결하게 만든 주체 
@@ -176,16 +176,65 @@
     - virutal 메서드하고도 유사 
     - 추상클래스 단순화 시키면 인터페이스 
 
-- 프로퍼티
+- **프로퍼티**
     - 클래스의 멤버변수 변형
     - 멤버변수의 접근제한자를 public으로 했을때의 객체지향적 문제점(코드오염 등)을 해결하기 위해서
-    - GET 접근자 / SET 접근자 
+    - get 접근자 / set 접근자 
     - SET은 값 할당시에 잘못된 데이터가 들어가지 않도록 막아야 함
     - Java에선 Getter메서드 / Setter 메서드로 사용 
 
 ## 2일차 
+- TIP, C#에서 빌드 시 오류 프로세스 엑세스 오류 
+    -  빌드하고자는 프로그램이 백그라운드 상에 실행중이기 때문
+    -  Ctrl + shift + ESC(작업관리자) 에서 해당 프로세스 작업 끝내기 후 
+    -  재빌드 
+
 - 컬렉션(배열 , 리스트 ,인덱서)
+    - 모든 배열은 System.Array 클래스를 상속한 하위 클래스 
+    - 기본적인 배열의 사용법 , Python 리스트와도 동일
+    - 배열 분할 - C# 8.0부터 . 파이썬의 배열 슬라이스를 도입
+        - ArrayList
+        - Stack
+        - Queue
+        - Hashtable(==Dictionary)
+    - foreach를 사용할 수 있는 객체로 만들기 - yield
+
 - 일반화(Generic) 프로그래밍
+    - 파이썬 - 변수에 제약사항 없음.
+    - 타임의 제약을 해소하고자 만든 기능. ArrayList 등이 해결(단 , 박싱(언박싱)등 성능의 문제가 있음)
+    - 하나의 메서드로 여러 타입의 처리를 해줄 수 있는 프로그래밍 방식 
+        - List<T>
+        - Stack<T>, Queue<T>
+        - Dictionary<TKey, TValue>
+
 - 예외처리 
+    - 소스코드 상 문법적 문제 - 오류(Error)
+    - 실행 중 생기는 오류 -예외 (Exception) 
+
+    ```cs
+    try {
+        // .. 예외가 발생할 것 같은 소스코드
+    } catch (Exception ex) {
+        /* 모든 예외클래스의 조상은 Exception(예 IndexOutOfRangeException) 
+           어떤 예외클래스를 쓸지 모르면 무조건 Exception 클래스 사용하면 됨 */
+        console.WriteLine(ex.Message);
+    } finally {
+        // 예외발생 유무에 상관없이 항상 실행
+    }
+    ```
 - 대리자와 이벤트
-- 람다식 
+    - 메서드 호출 시 매개변수 전달 
+    - 대리자 호출 시 함수(메서드) 자체를 전달
+    - 이벤트 - 컴퓨터 내에서 발생하는 객체의 사건들
+    - delegate --> event 
+    - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
+
+- TIP , C# 주식 중 영역을 저장할 수 있는 주석
+    - #region ~ #endregion 영역을 Expeend 또는 Collapse 가능 
+
+## 3일차
+- 람다식
+- LINQ
+- 애트리뷰트
+- 파이썬 실행
+- Winform UI 개발 + 파일 ,  
