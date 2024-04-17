@@ -52,6 +52,17 @@
             BtnLoad = new Button();
             PicNormal = new PictureBox();
             DlgOpenlmage = new OpenFileDialog();
+            GrbEditor = new GroupBox();
+            BtnFileSave = new Button();
+            BtnFileLoad = new Button();
+            RtxEditor = new RichTextBox();
+            groupBox6 = new GroupBox();
+            BtnStop = new Button();
+            BtnThread = new Button();
+            BtnNothread = new Button();
+            PrgProcess = new ProgressBar();
+            TxtLog = new TextBox();
+            BgwProgress = new System.ComponentModel.BackgroundWorker();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TrbDummy).BeginInit();
@@ -59,6 +70,8 @@
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicNormal).BeginInit();
+            GrbEditor.SuspendLayout();
+            groupBox6.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -88,8 +101,6 @@
             // ChkItalic
             // 
             ChkItalic.AutoSize = true;
-            ChkItalic.Checked = true;
-            ChkItalic.CheckState = CheckState.Checked;
             ChkItalic.Font = new Font("나눔고딕", 8.999999F);
             ChkItalic.Location = new Point(278, 21);
             ChkItalic.Name = "ChkItalic";
@@ -102,8 +113,6 @@
             // Chkbold
             // 
             Chkbold.AutoSize = true;
-            Chkbold.Checked = true;
-            Chkbold.CheckState = CheckState.Checked;
             Chkbold.Font = new Font("나눔고딕", 8.999999F);
             Chkbold.Location = new Point(222, 21);
             Chkbold.Name = "Chkbold";
@@ -169,7 +178,7 @@
             groupBox3.Controls.Add(BtnModal);
             groupBox3.Location = new Point(12, 251);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(421, 130);
+            groupBox3.Size = new Size(421, 81);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "모달창 , 모달리스창";
@@ -220,16 +229,16 @@
             groupBox4.Controls.Add(BtnAddRoot);
             groupBox4.Controls.Add(LsvDummy);
             groupBox4.Controls.Add(TrvDummy);
-            groupBox4.Location = new Point(12, 387);
+            groupBox4.Location = new Point(12, 338);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(421, 219);
+            groupBox4.Size = new Size(421, 268);
             groupBox4.TabIndex = 3;
             groupBox4.TabStop = false;
             groupBox4.Text = "트리뷰 , 리스트뷰 ";
             // 
             // BtnAddChild
             // 
-            BtnAddChild.Location = new Point(107, 178);
+            BtnAddChild.Location = new Point(107, 221);
             BtnAddChild.Name = "BtnAddChild";
             BtnAddChild.Size = new Size(84, 35);
             BtnAddChild.TabIndex = 2;
@@ -239,7 +248,7 @@
             // 
             // BtnAddRoot
             // 
-            BtnAddRoot.Location = new Point(6, 178);
+            BtnAddRoot.Location = new Point(6, 221);
             BtnAddRoot.Name = "BtnAddRoot";
             BtnAddRoot.Size = new Size(87, 35);
             BtnAddRoot.TabIndex = 2;
@@ -251,7 +260,7 @@
             // 
             LsvDummy.Location = new Point(216, 22);
             LsvDummy.Name = "LsvDummy";
-            LsvDummy.Size = new Size(185, 150);
+            LsvDummy.Size = new Size(185, 193);
             LsvDummy.TabIndex = 1;
             LsvDummy.UseCompatibleStateImageBehavior = false;
             LsvDummy.View = View.Details;
@@ -260,7 +269,7 @@
             // 
             TrvDummy.Location = new Point(6, 22);
             TrvDummy.Name = "TrvDummy";
-            TrvDummy.Size = new Size(185, 150);
+            TrvDummy.Size = new Size(185, 193);
             TrvDummy.TabIndex = 0;
             // 
             // groupBox5
@@ -269,7 +278,7 @@
             groupBox5.Controls.Add(PicNormal);
             groupBox5.Location = new Point(439, 15);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(334, 591);
+            groupBox5.Size = new Size(334, 317);
             groupBox5.TabIndex = 4;
             groupBox5.TabStop = false;
             groupBox5.Text = "픽처박스";
@@ -294,11 +303,120 @@
             PicNormal.TabStop = false;
             PicNormal.Click += PicNormal_Click;
             // 
+            // GrbEditor
+            // 
+            GrbEditor.Controls.Add(BtnFileSave);
+            GrbEditor.Controls.Add(BtnFileLoad);
+            GrbEditor.Controls.Add(RtxEditor);
+            GrbEditor.Location = new Point(779, 15);
+            GrbEditor.Name = "GrbEditor";
+            GrbEditor.Size = new Size(423, 591);
+            GrbEditor.TabIndex = 5;
+            GrbEditor.TabStop = false;
+            GrbEditor.Text = "텍스트에디터";
+            // 
+            // BtnFileSave
+            // 
+            BtnFileSave.Location = new Point(333, 537);
+            BtnFileSave.Name = "BtnFileSave";
+            BtnFileSave.Size = new Size(81, 33);
+            BtnFileSave.TabIndex = 1;
+            BtnFileSave.Text = "파일세이브";
+            BtnFileSave.UseVisualStyleBackColor = true;
+            BtnFileSave.Click += BtnFileSave_Click;
+            // 
+            // BtnFileLoad
+            // 
+            BtnFileLoad.Location = new Point(236, 537);
+            BtnFileLoad.Name = "BtnFileLoad";
+            BtnFileLoad.Size = new Size(80, 33);
+            BtnFileLoad.TabIndex = 1;
+            BtnFileLoad.Text = "파일로드";
+            BtnFileLoad.UseVisualStyleBackColor = true;
+            BtnFileLoad.Click += BtnFileLoad_Click;
+            // 
+            // RtxEditor
+            // 
+            RtxEditor.BorderStyle = BorderStyle.None;
+            RtxEditor.Location = new Point(6, 22);
+            RtxEditor.Name = "RtxEditor";
+            RtxEditor.Size = new Size(411, 507);
+            RtxEditor.TabIndex = 0;
+            RtxEditor.Text = "";
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(BtnStop);
+            groupBox6.Controls.Add(BtnThread);
+            groupBox6.Controls.Add(BtnNothread);
+            groupBox6.Controls.Add(PrgProcess);
+            groupBox6.Controls.Add(TxtLog);
+            groupBox6.Location = new Point(439, 338);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(334, 268);
+            groupBox6.TabIndex = 6;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "스레드 , 백그라운드워커";
+            // 
+            // BtnStop
+            // 
+            BtnStop.Enabled = false;
+            BtnStop.Location = new Point(250, 223);
+            BtnStop.Name = "BtnStop";
+            BtnStop.Size = new Size(78, 33);
+            BtnStop.TabIndex = 2;
+            BtnStop.Text = "중지";
+            BtnStop.UseVisualStyleBackColor = true;
+            BtnStop.Click += Btnstop_Click;
+            // 
+            // BtnThread
+            // 
+            BtnThread.Location = new Point(166, 223);
+            BtnThread.Name = "BtnThread";
+            BtnThread.Size = new Size(78, 33);
+            BtnThread.TabIndex = 2;
+            BtnThread.Text = "스레드";
+            BtnThread.UseVisualStyleBackColor = true;
+            BtnThread.Click += BtnThread_Click;
+            // 
+            // BtnNothread
+            // 
+            BtnNothread.Location = new Point(82, 223);
+            BtnNothread.Name = "BtnNothread";
+            BtnNothread.Size = new Size(78, 33);
+            BtnNothread.TabIndex = 2;
+            BtnNothread.Text = "노스레드";
+            BtnNothread.UseVisualStyleBackColor = true;
+            BtnNothread.Click += BtnNothread_Click;
+            // 
+            // PrgProcess
+            // 
+            PrgProcess.Location = new Point(6, 192);
+            PrgProcess.Name = "PrgProcess";
+            PrgProcess.Size = new Size(322, 23);
+            PrgProcess.TabIndex = 1;
+            // 
+            // TxtLog
+            // 
+            TxtLog.Location = new Point(6, 22);
+            TxtLog.Multiline = true;
+            TxtLog.Name = "TxtLog";
+            TxtLog.Size = new Size(322, 164);
+            TxtLog.TabIndex = 0;
+            // 
+            // BgwProgress
+            // 
+            BgwProgress.DoWork += BgwProgress_DoWork;
+            BgwProgress.ProgressChanged += BgwProgress_ProgressChanged;
+            BgwProgress.RunWorkerCompleted += BgwProgress_RunWorkerCompleted;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1205, 688);
+            Controls.Add(groupBox6);
+            Controls.Add(GrbEditor);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
@@ -318,6 +436,9 @@
             groupBox4.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PicNormal).EndInit();
+            GrbEditor.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -346,5 +467,16 @@
         private Button BtnLoad;
         private PictureBox PicNormal;
         private OpenFileDialog DlgOpenlmage;
+        private GroupBox GrbEditor;
+        private RichTextBox RtxEditor;
+        private Button BtnFileSave;
+        private Button BtnFileLoad;
+        private GroupBox groupBox6;
+        private Button BtnNothread;
+        private ProgressBar PrgProcess;
+        private TextBox TxtLog;
+        private Button BtnStop;
+        private Button BtnThread;
+        private System.ComponentModel.BackgroundWorker BgwProgress;
     }
 }

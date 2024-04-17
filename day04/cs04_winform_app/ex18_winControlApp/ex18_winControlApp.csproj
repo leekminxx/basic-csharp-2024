@@ -13,4 +13,12 @@
     <Content Include="control.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Sources\basic-csharp-2024\day04\cs04_winform_app\ex18_winControlApp\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Sources\basic-csharp-2024\day04\cs04_winform_app\ex18_winControlApp\.editorconfig" />
+  </ItemGroup>
+
 </Project>
