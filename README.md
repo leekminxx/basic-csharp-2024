@@ -330,6 +330,10 @@
 - 토이 프로젝트 
     - 윈도우 탐색기 앱 종료
         - 실행결과 
+
+https://github.com/leekminxx/basic-csharp-2024/assets/158007500/a3b7ecb2-7125-4a29-b675-15fb54b3debd
+
+
     
 
     - 도서관리 앱 with SQL Server(Base) ModernUI
