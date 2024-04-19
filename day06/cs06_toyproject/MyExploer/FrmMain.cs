@@ -120,13 +120,56 @@ namespace MyExploer
 
             }
         }
-    
+
 
         private void LsvFile_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             { //컨텍스트메뉴는 오른쪽 버튼에서만 동작
                 CmsFiles.Show(LsvFile, e.Location); // 마우스 클릭한 위치에 
+            }
+        }
+        // 우클릭 후 자세히 등등 옵션 적용하는 코드
+        private void TstMenuLargeIcon_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.LargeIcon;
+        }
+
+        private void TstMenuSmall_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.SmallIcon;
+        }
+
+        private void TstMenuList_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.List;
+        }
+
+        private void TstMenuDetails_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.Details;
+        }
+
+        private void TstMenuTile_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.Tile;
+        }
+        // 리스트뷰 아이템 더블클릭 이벤트핸들러. 실행파일 실행
+        private void LsvFile_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var extension = LsvFile.SelectedItems[0].Text.Split(".")[1];
+                if (extension == "exe")
+                {   // MessageBox.Show(LsvFile.SelectedItems[0].Text);   // 눌렀을때 이름이 뜸  ,, 디버깅용
+                    // 실행파일의 경로는 TxtPath
+                    var fullPath = TxtPath.Text + "\\" + LsvFile.SelectedItems[0].Text;
+                    MessageBox.Show(fullPath); // 외부프로그램 실행
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message,"오류" ,  MessageBoxButtons.OK, MessageBoxIcon.Error);    
             }
         }
     }

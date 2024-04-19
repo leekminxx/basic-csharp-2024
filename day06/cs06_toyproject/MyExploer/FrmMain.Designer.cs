@@ -39,17 +39,17 @@ namespace MyExploer
             ImgSmallIcon = new ImageList(components);
             LsvFile = new ListView();
             ClhTitle = new ColumnHeader();
-            ClhType = new ColumnHeader();
             ClhModifiedDate = new ColumnHeader();
+            ClhType = new ColumnHeader();
             ClhSize = new ColumnHeader();
             ImgLargeIcon = new ImageList(components);
             CmsFiles = new ContextMenuStrip(components);
             보기ToolStripMenuItem = new ToolStripMenuItem();
-            toolStripTextBox1 = new ToolStripTextBox();
-            toolStripTextBox2 = new ToolStripTextBox();
-            toolStripTextBox3 = new ToolStripTextBox();
-            toolStripTextBox4 = new ToolStripTextBox();
-            toolStripTextBox5 = new ToolStripTextBox();
+            TstMenuLargeIcon = new ToolStripMenuItem();
+            TstMenuSmall = new ToolStripMenuItem();
+            TstMenuList = new ToolStripMenuItem();
+            TstMenuDetails = new ToolStripMenuItem();
+            TstMenuTile = new ToolStripMenuItem();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpcExplorer).BeginInit();
             SpcExplorer.Panel1.SuspendLayout();
@@ -157,6 +157,7 @@ namespace MyExploer
             LsvFile.TabIndex = 0;
             LsvFile.UseCompatibleStateImageBehavior = false;
             LsvFile.View = View.Details;
+            LsvFile.DoubleClick += LsvFile_DoubleClick;
             LsvFile.MouseDown += LsvFile_MouseDown;
             // 
             // ClhTitle
@@ -164,15 +165,15 @@ namespace MyExploer
             ClhTitle.Text = "이름";
             ClhTitle.Width = 200;
             // 
-            // ClhType
-            // 
-            ClhType.Text = "유형";
-            ClhType.Width = 100;
-            // 
             // ClhModifiedDate
             // 
             ClhModifiedDate.Text = "수정일자";
             ClhModifiedDate.Width = 100;
+            // 
+            // ClhType
+            // 
+            ClhType.Text = "유형";
+            ClhType.Width = 100;
             // 
             // ClhSize
             // 
@@ -200,40 +201,45 @@ namespace MyExploer
             // 
             // 보기ToolStripMenuItem
             // 
-            보기ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1, toolStripTextBox2, toolStripTextBox3, toolStripTextBox4, toolStripTextBox5 });
+            보기ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { TstMenuLargeIcon, TstMenuSmall, TstMenuList, TstMenuDetails, TstMenuTile });
             보기ToolStripMenuItem.Name = "보기ToolStripMenuItem";
             보기ToolStripMenuItem.Size = new Size(98, 22);
             보기ToolStripMenuItem.Text = "보기";
             // 
-            // toolStripTextBox1
+            // TstMenuLargeIcon
             // 
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 23);
-            toolStripTextBox1.Text = "큰 아이콘";
+            TstMenuLargeIcon.Name = "TstMenuLargeIcon";
+            TstMenuLargeIcon.Size = new Size(138, 22);
+            TstMenuLargeIcon.Text = "큰 아이콘";
+            TstMenuLargeIcon.Click += TstMenuLargeIcon_Click;
             // 
-            // toolStripTextBox2
+            // TstMenuSmall
             // 
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 23);
-            toolStripTextBox2.Text = "작은 아이콘";
+            TstMenuSmall.Name = "TstMenuSmall";
+            TstMenuSmall.Size = new Size(138, 22);
+            TstMenuSmall.Text = "작은 아이콘";
+            TstMenuSmall.Click += TstMenuSmall_Click;
             // 
-            // toolStripTextBox3
+            // TstMenuList
             // 
-            toolStripTextBox3.Name = "toolStripTextBox3";
-            toolStripTextBox3.Size = new Size(100, 23);
-            toolStripTextBox3.Text = "목록";
+            TstMenuList.Name = "TstMenuList";
+            TstMenuList.Size = new Size(138, 22);
+            TstMenuList.Text = "목록";
+            TstMenuList.Click += TstMenuList_Click;
             // 
-            // toolStripTextBox4
+            // TstMenuDetails
             // 
-            toolStripTextBox4.Name = "toolStripTextBox4";
-            toolStripTextBox4.Size = new Size(100, 23);
-            toolStripTextBox4.Text = "자세히";
+            TstMenuDetails.Name = "TstMenuDetails";
+            TstMenuDetails.Size = new Size(138, 22);
+            TstMenuDetails.Text = "자세히";
+            TstMenuDetails.Click += TstMenuDetails_Click;
             // 
-            // toolStripTextBox5
+            // TstMenuTile
             // 
-            toolStripTextBox5.Name = "toolStripTextBox5";
-            toolStripTextBox5.Size = new Size(100, 23);
-            toolStripTextBox5.Text = "타일";
+            TstMenuTile.Name = "TstMenuTile";
+            TstMenuTile.Size = new Size(138, 22);
+            TstMenuTile.Text = "타일";
+            TstMenuTile.Click += TstMenuTile_Click;
             // 
             // FrmMain
             // 
@@ -275,10 +281,10 @@ namespace MyExploer
         private ImageList ImgLargeIcon;
         private ContextMenuStrip CmsFiles;
         private ToolStripMenuItem 보기ToolStripMenuItem;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripTextBox toolStripTextBox2;
-        private ToolStripTextBox toolStripTextBox3;
-        private ToolStripTextBox toolStripTextBox4;
-        private ToolStripTextBox toolStripTextBox5;
+        private ToolStripMenuItem TstMenuLargeIcon;
+        private ToolStripMenuItem TstMenuSmall;
+        private ToolStripMenuItem TstMenuList;
+        private ToolStripMenuItem TstMenuDetails;
+        private ToolStripMenuItem TstMenuTile;
     }
 }
