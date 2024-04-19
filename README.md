@@ -330,9 +330,18 @@
 - 토이 프로젝트 
     - 윈도우 탐색기 앱 종료
         - 실행결과 
-    
+
 
     - 도서관리 앱 with SQL Server(Base) ModernUI
+    ```cs
+     // 갑형식 변수는 null
+     // 값형식 변수에 null 값을 넣을 수 있도록 만들어준 기능 Nullable
+     int? a = null;
+     double? b = null;
+     float? c = null;
+     ```
+        - 로그인 패스워드 암호화 미구현 
+
 ## 8일차
 - 토이 프로젝트
     - 도서관리 앱 종료
