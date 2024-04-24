@@ -95,7 +95,7 @@ namespace NewBookRentalShopApp
                 SqlCommand cmd = new SqlCommand(query, conn);
                 // @userId, @password 파라미터 할당
                 SqlParameter prmUserId = new SqlParameter("@userId" ,userId);
-                SqlParameter prmPassword = new SqlParameter("@password", Helper.Common.GetMd5Hash(md5Hash , password));
+                SqlParameter prmPassword = new SqlParameter("@password",  Helper.Common.GetMd5Hash(md5Hash , password));
                 cmd.Parameters.Add(prmUserId);
                 cmd.Parameters.Add(prmPassword);
 
@@ -105,6 +105,7 @@ namespace NewBookRentalShopApp
                 {
                     chkUserId = reader["userId"] != null ? reader["userId"].ToString() : "-"; // 유저아이디가 null일때 - 변경
                     chkPassword = reader["password"] != null? reader["password"].ToString() : "-";  // 패스워드가 null 이면 - 로 변경
+                    Helper.Common.LoginId = chkUserId;  // 로그인된 아이디
 
                     return true;
                 }

@@ -353,7 +353,7 @@
         - 앱사용자관리 종료
        
  ## 9일차      
- - 토이 프로젝트
+ - 토이 프로젝트ㄴ
     - 기존 만들어진 폼을 복사해서 변경할 시 
         - *** *.클래스 명 , 생성자 , *.Designer.cs에 있는 클래스명** 3군데 이름 변경
     - 도서관리 앱       
@@ -370,6 +370,7 @@
         - 대출관리
         - 이 프로그램은...
 
+        ![책대여프로그램](https://raw.githubusercontent.com/leekminxx/basic-csharp-2024/main/image/cs006.png)
 
 ## 나머지
 - Penfing 

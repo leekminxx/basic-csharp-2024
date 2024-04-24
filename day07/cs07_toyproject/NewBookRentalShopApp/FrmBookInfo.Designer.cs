@@ -190,7 +190,7 @@
             this.TxtIsbn.CustomButton.Visible = false;
             this.TxtIsbn.Lines = new string[0];
             this.TxtIsbn.Location = new System.Drawing.Point(109, 188);
-            this.TxtIsbn.MaxLength = 32767;
+            this.TxtIsbn.MaxLength = 13;
             this.TxtIsbn.Name = "TxtIsbn";
             this.TxtIsbn.PasswordChar = '\0';
             this.TxtIsbn.PromptText = "ISBN 입력";
@@ -205,6 +205,7 @@
             this.TxtIsbn.WaterMark = "ISBN 입력";
             this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIsbn_KeyPress);
             // 
             // TxtNames
             // 

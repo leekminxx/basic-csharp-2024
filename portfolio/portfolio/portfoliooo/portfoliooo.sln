@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lkm0712", "lkm0712\lkm0712.csproj", "{BD039734-ED04-433B-AEA8-B342F243E2A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lkm0712", "lkm0712\lkm0712.csproj", "{BD039734-ED04-433B-AEA8-B342F243E2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lkmLogin", "lkmLogin\lkmLogin.csproj", "{73608D83-0D0B-4BBD-9B4F-CC851E7ABA39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BD039734-ED04-433B-AEA8-B342F243E2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD039734-ED04-433B-AEA8-B342F243E2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD039734-ED04-433B-AEA8-B342F243E2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73608D83-0D0B-4BBD-9B4F-CC851E7ABA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73608D83-0D0B-4BBD-9B4F-CC851E7ABA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73608D83-0D0B-4BBD-9B4F-CC851E7ABA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73608D83-0D0B-4BBD-9B4F-CC851E7ABA39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
