@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             panel2 = new Panel();
-            panel3 = new Panel();
             panel4 = new Panel();
             TxtUserId = new TextBox();
             label1 = new Label();
@@ -41,56 +39,38 @@
             BtnCancel = new Button();
             SuspendLayout();
             // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveBorder;
-            panel1.Location = new Point(28, 340);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(215, 1);
-            panel1.TabIndex = 0;
-            // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveBorder;
-            panel2.Location = new Point(31, 340);
+            panel2.Location = new Point(32, 334);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(215, 1);
+            panel2.Size = new Size(230, 1);
             panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ActiveBorder;
-            panel3.Location = new Point(25, 340);
-            panel3.Margin = new Padding(3, 4, 3, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(215, 1);
-            panel3.TabIndex = 0;
             // 
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveBorder;
-            panel4.Location = new Point(28, 413);
+            panel4.Location = new Point(32, 413);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(215, 1);
+            panel4.Size = new Size(230, 1);
             panel4.TabIndex = 2;
             // 
             // TxtUserId
             // 
             TxtUserId.BackColor = SystemColors.Control;
-            TxtUserId.Location = new Point(28, 315);
+            TxtUserId.Location = new Point(33, 387);
             TxtUserId.Margin = new Padding(3, 4, 3, 4);
             TxtUserId.Name = "TxtUserId";
-            TxtUserId.Size = new Size(209, 23);
+            TxtUserId.Size = new Size(230, 23);
             TxtUserId.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(28, 286);
+            label1.Location = new Point(33, 289);
             label1.Name = "label1";
             label1.Size = new Size(60, 15);
             label1.TabIndex = 4;
@@ -100,7 +80,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(29, 369);
+            label2.Location = new Point(33, 369);
             label2.Name = "label2";
             label2.Size = new Size(57, 15);
             label2.TabIndex = 5;
@@ -109,10 +89,10 @@
             // TxtPassword
             // 
             TxtPassword.BackColor = SystemColors.Control;
-            TxtPassword.Location = new Point(28, 388);
+            TxtPassword.Location = new Point(33, 308);
             TxtPassword.Margin = new Padding(3, 4, 3, 4);
             TxtPassword.Name = "TxtPassword";
-            TxtPassword.Size = new Size(209, 23);
+            TxtPassword.Size = new Size(230, 23);
             TxtPassword.TabIndex = 6;
             // 
             // BtnLogin
@@ -165,20 +145,17 @@
             Controls.Add(TxtUserId);
             Controls.Add(panel4);
             Controls.Add(panel2);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
+            ForeColor = SystemColors.ActiveCaption;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmLogin";
             Text = "쇼핑몰 로그인";
+            TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox TxtUserId;
         private System.Windows.Forms.Label label1;
