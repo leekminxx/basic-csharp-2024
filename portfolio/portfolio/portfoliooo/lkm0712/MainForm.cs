@@ -1,12 +1,9 @@
-
-
-
 using System.Windows.Forms;
 namespace lkm0712
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -20,9 +17,6 @@ namespace lkm0712
         {
             timer1.Interval = 100; // 타이머 간격 100m
             timer1.Start(); //타이머 시작
-
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)

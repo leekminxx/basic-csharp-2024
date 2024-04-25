@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace lkm0712.ucPanel
 {
@@ -21,12 +23,7 @@ namespace lkm0712.ucPanel
         {
             pictureBox1.Tag = "hello!";
         }
-
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(pictureBox1.Tag.ToString());
-        }
+       
     }
+    
 }
