@@ -236,5 +236,7 @@ namespace NewBookRentalShopApp
                 TxtBookNames.Text = Helper.Common.SelBookName;
             }
         }
+
+        
     }
 }
