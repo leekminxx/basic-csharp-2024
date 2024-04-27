@@ -1,4 +1,4 @@
-![toyproject](https://github.com/leekminxx/basic-csharp-2024/assets/158007500/9fa60ee5-7678-44af-acb8-3df7e089ca63)# C# 기본 학습
+## C# 기본 학습
 2024년 IoT개발자과정 C# 리포지토리 
 
 ## 1일차
@@ -383,6 +383,7 @@
     - 특징 
     - 배운점
     - 실행영상
+      
       ![toyproject](https://github.com/leekminxx/basic-csharp-2024/assets/158007500/e5a1feab-5c0e-434e-814c-8e42be51ccfd)
 
 
