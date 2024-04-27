@@ -1,6 +1,6 @@
 ﻿namespace BMI_chek
 {
-    partial class Form1
+    partial class c
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -254,14 +254,14 @@
             this.LblLightWeight.TabIndex = 0;
             this.LblLightWeight.Text = "-";
             // 
-            // Form1
+            // c
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 250);
+            this.ClientSize = new System.Drawing.Size(465, 251);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "c";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace lkm0712.Helper
+namespace BMI_chek.Helper
 {
     
     public class Common

@@ -3,6 +3,7 @@ namespace lkm0712
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
@@ -17,6 +18,15 @@ namespace lkm0712
         {
             timer1.Interval = 100; // 타이머 간격 100m
             timer1.Start(); //타이머 시작
+
+            FrmLogin frm = new FrmLogin();
+            // FrnMain이 부모창 설정
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.TopMost = true; // 가장 윈도우화면 상단에
+            frm.ShowDialog();
+
+            //TxtUserId.Text = Helper.Common.LoginId; // 메인창에 로그인된 아이디 표시
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -32,7 +42,7 @@ namespace lkm0712
         #region 버튼 이벤트
         private void Btns2_Click(object sender, EventArgs e)
         {
-           pMain.Controls.Clear();
+            pMain.Controls.Clear();
             pMain.Controls.Add(ucSc2);
         }
 
@@ -48,5 +58,10 @@ namespace lkm0712
             pMain.Controls.Add(ucSc4);
         }
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

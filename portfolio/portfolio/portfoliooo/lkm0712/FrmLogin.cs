@@ -4,6 +4,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace lkm0712
 {
@@ -16,15 +18,18 @@ namespace lkm0712
             get { return isLogin; }
             set { isLogin = value; }
         }
+
+        public FrmLogin()
+        {
+            InitializeComponent();
+
+            TxtUserId.Text = string.Empty;
+            TxtPassword.Text = string.Empty;
+        }
+
         private void BtnCancel_Click_1(object sender, EventArgs e)
         {
             Environment.Exit(0); // 무조건 종료
-        }
-
-        public string LoginID
-        {
-            get;
-            private set;
         }
 
 
@@ -63,7 +68,7 @@ namespace lkm0712
             string password = TxtPassword.Text;
             string chkUserId = string.Empty;  //DB에서 넘어온 값
             string chkPassword = string.Empty;
-
+         
             using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
@@ -76,7 +81,7 @@ namespace lkm0712
                 SqlCommand cmd = new SqlCommand(query, conn);
                 // @userId, @password 파라미터 할당
                 SqlParameter prmUserId = new SqlParameter("@userId", userId);
-                SqlParameter prmPassword = new SqlParameter("@password", Helper.Common.GetMd5Hash(md5Hash, password));
+                SqlParameter prmPassword = new SqlParameter("@password", password);
                 cmd.Parameters.Add(prmUserId);
                 cmd.Parameters.Add(prmPassword);
 
@@ -99,6 +104,24 @@ namespace lkm0712
             }
 
         }
+
+        private void TxtUserId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) // 키보드를 입력(keyPress) 한 값 (KeyChar) 이 Enter(=13) 이면
+            {
+                BtnLogin_Click(sender, e); //  BtnLogin_Click 이벤트핸들러 실행 
+            }
+        }
+
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) // 키보드를 입력(keyPress) 한 값 (KeyChar) 이 Enter(=13) 이면
+            {
+                TxtPassword.Focus();    // 패스워드로 포커스 이동
+            }
+        }
+
+        
     }
 
 }

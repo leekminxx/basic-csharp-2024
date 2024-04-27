@@ -60,11 +60,12 @@
             // TxtUserId
             // 
             TxtUserId.BackColor = SystemColors.Control;
-            TxtUserId.Location = new Point(33, 387);
+            TxtUserId.Location = new Point(33, 308);
             TxtUserId.Margin = new Padding(3, 4, 3, 4);
             TxtUserId.Name = "TxtUserId";
             TxtUserId.Size = new Size(230, 23);
             TxtUserId.TabIndex = 3;
+            TxtUserId.KeyPress += TxtUserId_KeyPress;
             // 
             // label1
             // 
@@ -89,11 +90,13 @@
             // TxtPassword
             // 
             TxtPassword.BackColor = SystemColors.Control;
-            TxtPassword.Location = new Point(33, 308);
+            TxtPassword.Location = new Point(32, 382);
             TxtPassword.Margin = new Padding(3, 4, 3, 4);
             TxtPassword.Name = "TxtPassword";
+            TxtPassword.PasswordChar = '●';
             TxtPassword.Size = new Size(230, 23);
             TxtPassword.TabIndex = 6;
+            TxtPassword.KeyPress += TxtPassword_KeyPress;
             // 
             // BtnLogin
             // 
@@ -148,7 +151,7 @@
             ForeColor = SystemColors.ActiveCaption;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmLogin";
-            Text = "쇼핑몰 로그인";
+            Text = "로그인";
             TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ResumeLayout(false);
             PerformLayout();

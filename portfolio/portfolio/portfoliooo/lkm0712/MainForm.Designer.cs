@@ -36,10 +36,10 @@
             groupBox3 = new GroupBox();
             label3 = new Label();
             textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            PrBox4 = new TextBox();
+            PrBox3 = new TextBox();
+            PrBox2 = new TextBox();
+            PrBox1 = new TextBox();
             groupBox2 = new GroupBox();
             checkedListBox1 = new CheckedListBox();
             checkedListBox4 = new CheckedListBox();
@@ -129,10 +129,10 @@
             // 
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(textBox6);
-            groupBox3.Controls.Add(textBox5);
-            groupBox3.Controls.Add(textBox3);
-            groupBox3.Controls.Add(textBox2);
-            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(PrBox4);
+            groupBox3.Controls.Add(PrBox3);
+            groupBox3.Controls.Add(PrBox2);
+            groupBox3.Controls.Add(PrBox1);
             groupBox3.Location = new Point(20, 420);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(388, 269);
@@ -159,41 +159,41 @@
             textBox6.Text = "장바구니 목록";
             textBox6.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
+            // PrBox4
             // 
-            textBox5.Location = new Point(126, 213);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(175, 23);
-            textBox5.TabIndex = 0;
-            textBox5.Text = "원";
-            textBox5.TextAlign = HorizontalAlignment.Right;
+            PrBox4.Location = new Point(126, 213);
+            PrBox4.Name = "PrBox4";
+            PrBox4.Size = new Size(175, 23);
+            PrBox4.TabIndex = 0;
+            PrBox4.Text = "원";
+            PrBox4.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox3
+            // PrBox3
             // 
-            textBox3.Location = new Point(126, 168);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(175, 23);
-            textBox3.TabIndex = 0;
-            textBox3.Text = "원";
-            textBox3.TextAlign = HorizontalAlignment.Right;
+            PrBox3.Location = new Point(126, 168);
+            PrBox3.Name = "PrBox3";
+            PrBox3.Size = new Size(175, 23);
+            PrBox3.TabIndex = 0;
+            PrBox3.Text = "원";
+            PrBox3.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox2
+            // PrBox2
             // 
-            textBox2.Location = new Point(126, 125);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 23);
-            textBox2.TabIndex = 0;
-            textBox2.Text = "원";
-            textBox2.TextAlign = HorizontalAlignment.Right;
+            PrBox2.Location = new Point(126, 125);
+            PrBox2.Name = "PrBox2";
+            PrBox2.Size = new Size(175, 23);
+            PrBox2.TabIndex = 0;
+            PrBox2.Text = "원";
+            PrBox2.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox1
+            // PrBox1
             // 
-            textBox1.Location = new Point(126, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 23);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "원";
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            PrBox1.Location = new Point(126, 86);
+            PrBox1.Name = "PrBox1";
+            PrBox1.Size = new Size(175, 23);
+            PrBox1.TabIndex = 0;
+            PrBox1.Text = "원";
+            PrBox1.TextAlign = HorizontalAlignment.Right;
             // 
             // groupBox2
             // 
@@ -424,13 +424,13 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1137, 739);
             Controls.Add(groupBox1);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
@@ -462,12 +462,12 @@
         private Panel pMain;
         private GroupBox groupBox3;
         private GroupBox groupBox2;
-        private TextBox textBox1;
+        private TextBox PrBox1;
         private Label label3;
         private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox PrBox4;
+        private TextBox PrBox3;
+        private TextBox PrBox2;
         private Label label7;
         private Label label6;
         private Label label5;

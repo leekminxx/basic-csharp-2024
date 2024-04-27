@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BMI_chek
 {
-    public partial class Form1 : Form
+    public partial class c : Form
     {
         const float maleLightWeight = 18.5f;
         const float maleNormalWeight = 23;
@@ -20,7 +20,7 @@ namespace BMI_chek
         const float femaleOverWeight = 24;
 
         double dRet = 0;
-        public Form1()
+        public c()
         {
             InitializeComponent();
         }
